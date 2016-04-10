@@ -1,0 +1,26 @@
+CSS Shorthands
+
+N.B.: The order of elements separated by + is important. * marked are necessary.
+
+Border
+	border = border-width + border-style* + border-color
+	border: 5px solid red;
+	
+Margin, Padding, Border width
+	margin = [top] + [right] + [bottom] + [left]
+		   = [top] + [left, right] + [bottom]
+		   = [top, bottom] + [left, right]
+		   = [all]
+	margin: 5px 10px 12px 15px;
+	// same rules for padding and border width.
+	
+Background
+	background = background-color + background-image + background-repeat + background-attachment + background-position
+	background: #fff url(img_tree.png) no-repeat right top;
+	// multiple backgrounds can be added separated by comma.
+
+Box Shadow
+	box-shadow = h-shadow* + v-shadow* + blur + spread + color + inset
+	box-shadow: 2px 2px 3px 2px #aaa;
+	// box-shadow is one property and not a shorthand of multiple properties. multiple box shadows can be added separated by comma.
+		   

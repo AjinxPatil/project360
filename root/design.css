@@ -1,0 +1,431 @@
+@charset "utf-8";
+/* CSS Document */
+/* CSS Convention Guideline: "//google-styleguide.googlecode.com/svn/trunk/htmlcssguide.xml" */
+
+* {
+	margin: 0;
+	padding: 0;
+}
+html {
+  	border: 0;
+	height: 100%;
+	background-color: #333;
+}
+
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	color: #333;
+  	border: 0;
+	height: 100%;
+}
+
+.defaultFont {
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Due to variations between browsers, it's best practices to zero padding and margin on lists. For consistency, you can either specify the amounts you want here, or on the list items (LI, DT, DD) they contain. Remember that what you do here will cascade to the .nav list unless you write a more specific selector.
+ul,
+ol,
+dl { 
+	margin: 0;
+	padding: 0;
+}
+*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+	margin-top: 0;	 /* removing the top margin gets around an issue where margins can escape from their containing div. The remaining bottom margin will hold it away from any elements that follow. */
+	padding: 0 15px 0; /* adding the padding to the sides of the elements within the divs, instead of the divs themselves, gets rid of any box model math. A nested div with side padding can also be used as an alternate method. */
+}
+
+a {
+	text-decoration: none;
+}
+
+/* this selector removes the default blue border displayed in some browsers around an image when it is surrounded by a link */
+a img {
+	border: none;
+}
+
+#container {
+	min-width: 1200px;
+}
+
+/* bar at top of header */
+#topLinks {
+	height: 18px;
+	border: 0;
+	background-color: #333;
+	overflow: hidden;
+}
+
+#topLinks a {
+	float: right;
+	color: #999;
+	padding: 0 5px 0;
+	border: solid #666;
+	border-width: 0 1px 0;
+	font-size: 12px;
+}
+
+#topLinks a:hover {
+	color: #fff;
+}
+
+/* header */
+#hBar {
+	background: url(/images/header-texture.png) repeat;
+	overflow: hidden;
+}
+
+ /* logo in header */
+#hBar #hSiteLogo {
+	float: left;
+	width: 250px;
+	height: 100px;
+	text-align: center;
+}
+
+/* area in header to the right side of #hSiteLogo */
+#hBar #hContent {
+	height: 100px;
+	margin-left: 250px;
+	border: 0;
+}
+
+#hBar #navLine {
+	clear: both;
+	height: 10px;
+	background: -webkit-linear-gradient(top, rgba(102, 102, 102, 1), rgba(204, 204, 204, 0)), #ccc repeat;
+}
+
+/* content in #hContent above nav tabs */
+#hProjectBar {
+	height: 70px;
+	border: 0;
+}
+
+/* content inside #hProjectBar */
+.hProjectDetail {
+	color:#fff;
+}
+
+#navBar { 
+	height: 30px;
+	border: 0;
+}
+
+#navList { 
+	min-width: 900px;
+	height: 30px;
+	border: 0;
+	list-style-type: none;
+	overflow: hidden;
+}
+
+.navBarItem { 
+	float: left;
+	border: 0;
+}
+
+.navBarLink:link,
+.navBarLink:visited {
+	display: block;
+	height: 28px;
+	width: 106px;
+	color: #333;
+	background-color: #999;
+	margin: 2px 4px 0 0;
+	border: 0;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	font-size: 12px;
+	color: #ccc;
+	text-transform: capitalize;
+	text-decoration: none;
+	text-align: center;
+	line-height: 28px;
+}
+
+.navBarLink:hover,
+.navBarLink:active { 
+	color: #fff;
+}
+
+#navLineList {
+	height: 10px;
+	border: 0;
+	list-style-type: none;
+	overflow: hidden;
+}
+
+.navLineBlock {
+	float: left;
+	height: 10px;
+	width: 106px;
+	margin-right: 4px;
+	border: 0;
+}
+
+/* content below header */
+#mainContent { 
+	height: 100%;
+	padding: 0 0 30px 0;
+	background-color: #ccc;
+	position: relative;
+	z-index: 1;
+	overflow: hidden;
+}
+
+/* sidebar inside #mainContent */
+#mainContent #sidebar { 
+	float: left;
+	width: 210px;
+	height: 550px;
+	margin: 10px 10px 40px 20px;
+	padding: 10px 5px;
+	background-color: #fff;
+	box-shadow: inset 0 0 100px 0 rgba(204, 204, 204, 0.6), 0 -5px 10px -5px #999;
+	overflow: auto;
+}
+
+/* for paper-curl effect. But :after also inherits the overflow property from featContent which makes it useless
+#sidebar:after {
+	content: '';
+	width: 50%;
+	position: absolute;
+	bottom: 50%;
+	top: 14px;
+	right: 14px;
+	background-color: rgba(0, 0, 0, 0.5);
+	box-shadow: 0 15px 10px 0 rgba(0, 0, 0, 0.5);
+	-webkit-transform: rotate(-183deg);
+	z-index: -1;
+}*/
+
+/* content of features/selected-tab inside #mainContent to the right of #sidebar */
+#mainContent #featContent {
+	height: 550px;
+	margin: 10px 20px 40px 260px;
+	padding: 10px 5px 10px 5px;
+	background-color: #fff;
+	box-shadow: inset 0 0 200px 0 rgba(204, 204, 204, 0.6), 0 -5px 10px -5px #999;;
+	overflow: auto;
+}
+
+/* for paper-curl effect. But :after also inherits the overflow property from featContent which makes it useless
+#featContent:after {
+	content: '';
+	width: 50%;
+	position: absolute;
+	bottom: 50%;
+	top: 24px;
+	right: 15px;
+	background-color: rgba(0, 0, 0, 0.4);
+	box-shadow: 0 15px 10px 0 rgba(0, 0, 0, 0.4);
+	-webkit-transform: rotate(-183deg);
+	z-index: -1;
+}*/
+
+/* thin line below title headers in featContent, popUp. the header div must implement relative positioning */
+#boxLine {
+	height: 1px;
+	width: 100%;
+	background: -webkit-linear-gradient(left, rgb(128, 128, 128), rgba(128, 128, 128, 0.2));
+	position: absolute;
+	bottom: 0;
+}
+
+.textBtn {
+	background: none;
+	border: 0;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	text-align: center;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.redBtn {
+	height: 25px;
+	background-color: #c30;
+	border-style: none;
+	padding: 4px 10px;
+	color: #ccc;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.blueBtn {
+	height: 25px;
+	background-color: #36f;
+	border-style: none;
+	padding: 4px 10px;
+	color: #ccc;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+/* TODO: 
+.addBtn {
+	-webkit-box-shadow: rgba(0, 0, 0, 0.199219) 0px 1px 0px 0px;
+	background: transparent url("../images/plus.png") center left no-repeat;
+	background-color:#008A2E;
+	border-bottom-color:#333;
+	border:0;
+	box-shadow: rgba(0, 0, 0, 0.199219) 0px 1px 0px 0px;
+	color: #FFF;
+	font-size:12px;
+	height:25px;
+	padding:4px 10px;
+	text-decoration:none;
+	cursor:pointer;
+	text-indent:18px;
+	text-shadow: 0px 2px 3px #555;
+	border-radius:2px;
+}*/
+
+.greyBtn {
+	height: 25px;
+	background-color: #999;
+	border-style: none;
+	padding: 4px 10px;
+	color: #ccc;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.navDrop {
+	position: relative;
+	list-style-type: none;
+}
+
+.navDrop li {
+	display: inline-block;
+	min-width: 53px;
+	height: 25px;
+	margin: auto;
+	border: 1px solid #ccc;
+	padding: 0 10px;
+	-webkit-box-shadow: 0 0 10px 0 rgba(204, 204, 204, 0.5) inset;
+	background-color: #e6e6e6;
+}
+
+.navDrop ul {
+	display: none;
+	list-style-type: none;
+	position: absolute;
+	top: 100%;
+	right: 1px;
+}
+
+.navDrop li:hover > ul {
+	display: block;
+}
+
+.navDrop li a {
+	display: inline-block;
+	min-width: 60px;
+	text-align: center;
+	line-height: 25px;
+	cursor: default;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #666;
+}
+
+.navDrop li li {
+	height: 26px;
+	min-width: 90px;
+	-webkit-box-shadow: 0 0 10px 0 rgba(204, 204, 204, 0.2) inset;
+	background-color: #fff;
+	border: solid #ccc;
+	border-width: 0 1px 1px;
+	padding: 0 10px;
+	text-align: center;
+	cursor: pointer;
+}
+
+.navDrop li li:first-child {
+	border-width: 1px;
+	height: 25px;
+}
+
+.navDrop li li a {
+	display: inline-block;
+	min-width: 80px;
+	text-align: center;
+	line-height: 25px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #666;
+	cursor: pointer;
+}
+
+/* background of window when displaying a pop up */
+#popUpOverlay {
+	display: none;
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	left: 0;
+	top: 0;
+	background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* for feature titles, if used */
+.featTitle {
+	font-weight: bold;
+	color: #06c;
+}
+
+#footer {
+	clear: both;
+	height: 30px;
+	background-color: #333;
+	position: relative;
+	z-index: 2;
+	margin-top: -30px;
+	text-align: center;
+	font-size: 11px;
+	color: #ccc;
+}
+
+/* TODO: */
+#addmemberbox {
+	display: none;
+}
+
+/* indicator image for feed objects dashboard */
+.feedIndicator { 
+	width: 80px;
+	height: 20px;
+}
+
+/* TODO: */
+#window {
+	border-radius: 5px;
+	border: 10px solid rgba(219, 219, 219, 0.3);
+	padding: 10px;
+}
+
+/* TODO: */
+.profilepic {
+	width: 64px;
+	height: 64px;
+	border-style: solid;
+	border-color: #E6E6E6;
+	border-width: 1px;
+}

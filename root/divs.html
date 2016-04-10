@@ -1,0 +1,83 @@
+<html>
+<head>
+<title>Divs, divs and divs...</title>
+<style type="text/css">
+#container {
+	width:960;
+	margin:auto;
+	background-color:#666666;
+}
+div {
+	display:block;
+	height:305px;
+	margin:5px 5px 5px 5px;
+}
+.all {
+	background-color:#CCCCCC;
+	margin:5px 0 0 0;
+	height:315px;
+}
+#d21 {
+	float:left;
+	background-color:#00CCFF;
+	width:310px;
+}
+#d22 {
+	float:left;
+	background-color:#00CCFF;
+	width:630px;
+}
+.d3 {
+	float:left;
+	width:310px;
+	background-color:#00FFCC;
+}
+#d4 {
+	height:630px;
+}
+.d4 {
+	height:620px;
+}
+#d41 {
+	float:left;
+	width:310px;
+}
+#d42 {
+	float:left;
+	width:640px;
+	height:630px;
+	margin:0;
+}
+.d42 {
+	background-color:#FFFF00;
+}
+#d5 {
+	background-color:#CCCCCC;
+}
+
+</style>
+</head>
+
+<body>
+<div id="container">
+<div id="d1" class="all"></div>
+<div id="d2" class="all">
+	<div id="d21"></div>
+    <div id="d22"></div>
+</div>
+<div id="d3" class="all">
+	<div class="d3"></div>
+    <div class="d3"></div>
+    <div class="d3"></div>
+</div>
+<div id="d4" class="all">
+	<div id="d41" class="d4 d42"></div>
+    <div id="d42" class="d4">
+    	<div class="d42"></div>
+        <div class="d42"></div>
+    </div>
+</div>
+<div id="d5" class="all"></div>
+</div>
+</body>
+</html>

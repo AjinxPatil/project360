@@ -1,0 +1,62 @@
+Concepts
+
+1.	AJAX - Creating a traditional AJAX (asynchronous) connection using XMLHttpRequest object
+	CODE LOCATION: ../messages.php
+	
+	XMLHttpRequest.readyState values
+	0 - Uninitialized; request object created, open() not called.
+	1 - Loading; open() called, send() not called.
+	2 - Loaded; open() called, send() called, no response.
+	3 - Interactive; open() called, send() called, response started and incoming.
+	4 - Completed;
+	
+	HTTP Response Codes
+	200 - OK; successful response.
+	400 - Bad Request; client error for bad request.
+	404 - Not Found; 
+	408 - Request Timeout; server gave up waiting for complete request.
+	500 - Internal Server Error;
+	
+------------------------------------------------------------------------------------------------
+
+2. Importing jQuery from Google
+
+	<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+	<script type="text/javascript">
+	google.load("jquery", "1");
+	// your code
+	</script>
+	
+	Automatically loads the latest stable version of jQuery from Google servers.
+	google.load(moduleName, moduleVersion) loads the latest stable variation of 'moduleVersion' of 'moduleName'
+	If importing from Google, some jquery functions may not work like load() or $(<<init>>)
+	
+-------------------------------------------------------------------------------------------------
+
+3. Two-div content layout (using float)
+For creating the main skeleteon layout of the website i.e. sidebar + featContent, following code is used:
+
+HTML Code
+	<div id="mainContent">
+	<div id="sidebar"></div>
+	<div id="featContent"></div>
+	</div>
+
+CSS Code
+	#mainContent {
+		width:100%; 		/* important */
+		margin:0;
+		padding:0;
+		height:600px; 		/* any suitable value */
+		overflow:hidden; 	/* important */
+	}
+	#mainContent #sidebar {
+		width:250px; 		/* any suitable value */
+		float:left;  		/* important */
+		margin:0;
+	}
+	#mainContent #featContent {
+		margin-left:250px;  /* important */
+	}
+	
+-------------------------------------------------------------------------------------------
